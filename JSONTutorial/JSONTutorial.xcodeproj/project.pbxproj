@@ -11,6 +11,8 @@
 		B246CD201E98F8250025A736 /* MovieFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246CD1F1E98F8250025A736 /* MovieFeedVC.swift */; };
 		B246CD251E98F8250025A736 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B246CD241E98F8250025A736 /* Assets.xcassets */; };
 		B246CD281E98F8250025A736 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B246CD261E98F8250025A736 /* LaunchScreen.storyboard */; };
+		B246CD341E98FDA70025A736 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246CD331E98FDA70025A736 /* Movie.swift */; };
+		B246CD361E98FF060025A736 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B246CD351E98FF060025A736 /* MovieCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		B246CD241E98F8250025A736 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B246CD271E98F8250025A736 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B246CD291E98F8250025A736 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B246CD331E98FDA70025A736 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		B246CD351E98FF060025A736 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,8 +58,8 @@
 			children = (
 				B246CD1D1E98F8250025A736 /* AppDelegate.swift */,
 				B246CD2F1E98F90D0025A736 /* ViewModel */,
-				B246CD311E98F9200025A736 /* Model */,
 				B246CD301E98F9180025A736 /* View */,
+				B246CD311E98F9200025A736 /* Model */,
 				B246CD321E98F9250025A736 /* Controller */,
 				B246CD1F1E98F8250025A736 /* MovieFeedVC.swift */,
 				B246CD241E98F8250025A736 /* Assets.xcassets */,
@@ -75,6 +79,7 @@
 		B246CD301E98F9180025A736 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				B246CD351E98FF060025A736 /* MovieCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -82,6 +87,7 @@
 		B246CD311E98F9200025A736 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B246CD331E98FDA70025A736 /* Movie.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -167,6 +173,8 @@
 			files = (
 				B246CD201E98F8250025A736 /* MovieFeedVC.swift in Sources */,
 				B246CD1E1E98F8250025A736 /* AppDelegate.swift in Sources */,
+				B246CD361E98FF060025A736 /* MovieCell.swift in Sources */,
+				B246CD341E98FDA70025A736 /* Movie.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +330,7 @@
 				B246CD2E1E98F8250025A736 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
