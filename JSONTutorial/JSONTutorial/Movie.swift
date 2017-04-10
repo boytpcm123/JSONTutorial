@@ -43,15 +43,29 @@ extension Movie {
     }
     //failable initializer
     init?(json: [String: AnyObject]) {
-        guard let titleDict = json[Key.titleDict] else {
-            //let title = titleDict[Key.label] as String,
-            
+        guard let titleDict = json[Key.titleDict] as? [String: AnyObject],
+            let title = titleDict[Key.label] as? String,
+            let imageURLArray = json[Key.imageURLArray] as? [[String: AnyObject]],
+            let imageURL = imageURLArray.last?[Key.label] as? String,
+            let releaseDateDict = json[Key.releaseDateDict] as? [String: AnyObject],
+            let releaseDateAttributes = releaseDateDict[Key.attributes],
+            let releaseDate = releaseDateAttributes[Key.label] as? String,
+            let purchasePriceDict = json[Key.purchacePriceDict] as? [String: AnyObject],
+            let purchasePriceAttributes = purchasePriceDict[Key.attributes] as? [String: AnyObject],
+            let priceAmount = purchasePriceAttributes[Key.amount] as? String,
+            let priceCurrency = purchasePriceAttributes[Key.currency] as? String
+            else {
+                return nil
         }
-        
-        
-        
-        
-        
+        self.title = title
+        self.imageURL = imageURL
+        self.releaseDate = releaseDate
+        self.purchasePrice = Price(amount: priceAmount, currency: priceCurrency)
+        if let summaryDict = json[Key.summaryDict] as? [String:AnyObject], let summary = summaryDict[Key.label] as? String {
+            self.summary = summary
+        } else {
+            self.summary = ""
+        }
     }
     
     

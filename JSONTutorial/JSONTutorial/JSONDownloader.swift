@@ -8,6 +8,20 @@
 
 import Foundation
 
+enum Result <T>{
+    case Success(T)
+    case Error(ItunesApiError)
+}
+
+enum ItunesApiError: Error {
+    case requestFailed
+    case jsonConversionFailure
+    case invalidData
+    case responseUnsuccessful
+    case invalidURL
+    case jsonParsingFailure
+}
+
 struct JSONDownloader {
     
     //1 creating the session
@@ -57,16 +71,4 @@ struct JSONDownloader {
     }
 }
 
-enum Result <T>{
-    case Success(T)
-    case Error(ItunesApiError)
-}
 
-enum ItunesApiError: Error {
-    case requestFailed
-    case jsonConversionFailure
-    case invalidData
-    case responseUnsuccessful
-    case invalidURL
-    case jsonParsingFailure
-}
