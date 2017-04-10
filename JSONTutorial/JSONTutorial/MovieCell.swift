@@ -6,7 +6,7 @@
 //  Copyright © 2017 ninjaKID. All rights reserved.
 //
 
-
+import Foundation
 import UIKit
 
 class MovieCell: UITableViewCell {
@@ -87,5 +87,14 @@ class MovieCell: UITableViewCell {
         dateLabel.topAnchor.constraint(equalTo: movieTitleLabel.bottomAnchor).isActive = true
         
     }
+    
+    
+    func displayMovieInCell(using viewModel: MovieViewModel) {
+        movieTitleLabel.text = viewModel.title
+        dateLabel.text = viewModel.releaseDate
+        priceLabel.text = viewModel.purchasePrice
+    }
+    
+   
 
 }
